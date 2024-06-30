@@ -6,6 +6,15 @@ This work mainly explores two-part benefits of contrastive pre-training for audi
 2. Supervised setting. In this setting, the work mainly explores how much the segmentor can gain when using contrastively pre-trained model weights to init the backbone.
 
 ## Dictionary Structure
+* `./environment_config` the yml files of conda environments used in the work.
+
+## Environment Preparation
+### Zero-shot Setting
+conda env create -n ZSAVS -f Zero_shot_AVS.yml
+### Supervised Setting
+conda env create -n audio_seg -f audio_seg_config.yml
+
+### Supervised Setting
 
 ## Dataset Preparation
 For the dataset, we follow [AVSBench, ECCV 2022](https://opennlplab.github.io/AVSBench/)
