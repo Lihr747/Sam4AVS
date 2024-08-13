@@ -10,17 +10,21 @@ This work mainly explores two-part benefits of contrastive pre-training for audi
 
 ## Environment Preparation
 ### Zero-shot Setting
+```bash
 conda env create -n ZSAVS -f Zero_shot_AVS.yml
+```
 ### Supervised Setting
+```bash
 conda env create -n audio_seg -f audio_seg_config.yml
-
-### Supervised Setting
+```
 
 ## Dataset Preparation
-For the dataset, we follow [AVSBench, ECCV 2022](https://opennlplab.github.io/AVSBench/)
+For the dataset, we follow [AVSBench, ECCV 2022](https://opennlplab.github.io/AVSBench/). You can also access data via our [google drive](https://drive.google.com/drive/folders/1vLe-f2uoA-FV2qR2ZF4zawW9eYGCQ_xc?usp=drive_link)
 
 ## Pretrained Model Weights Preparation
 TODO
+
+
 
 ## Zero-shot AVS
 TODO
