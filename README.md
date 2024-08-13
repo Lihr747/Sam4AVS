@@ -19,12 +19,18 @@ conda env create -n audio_seg -f audio_seg_config.yml
 ```
 
 ## Dataset Preparation
-For the dataset, we follow [AVSBench, ECCV 2022](https://opennlplab.github.io/AVSBench/). You can also access data via our [google drive](https://drive.google.com/drive/folders/1vLe-f2uoA-FV2qR2ZF4zawW9eYGCQ_xc?usp=drive_link)
+### Dataset Download
+For the dataset, we follow [AVSBench, ECCV 2022](https://opennlplab.github.io/AVSBench/). You can also access data via our [google drive](https://drive.google.com/drive/folders/1vLe-f2uoA-FV2qR2ZF4zawW9eYGCQ_xc?usp=drive_link). Then, put the data into the `avsbench_data` folder.
 
+### Dataset Preprocessing
+```bash
+python preprocess_s4.py
+python preprocess_ms3.py
+```
 ## Pretrained Model Weights Preparation
 TODO
 
-
+## Directory Tree after Dataset and Model Weights Preparation
 
 ## Zero-shot AVS
 TODO
