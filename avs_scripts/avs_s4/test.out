@@ -1,0 +1,574 @@
+2023-07-16 15:12:57,807 __main__ INFO ==> Config: {'BATCH_SIZE': 4, 'LAMBDA_1': 50, 'TRAIN': {'FREEZE_AUDIO_EXTRACTOR': True, 'PRETRAINED_VGGISH_MODEL_PATH': '../../pretrained_backbones/vggish-10086976.pth', 'PREPROCESS_AUDIO_TO_LOG_MEL': False, 'POSTPROCESS_LOG_MEL_WITH_PCA': False, 'PRETRAINED_PCA_PARAMS_PATH': '../../pretrained_backbones/vggish_pca_params-970ea276.pth', 'FREEZE_VISUAL_EXTRACTOR': False, 'PRETRAINED_RESNET50_PATH': '../../pretrained_backbones/resnet50-19c8e357.pth', 'PRETRAINED_PVTV2_PATH': '../../pretrained_backbones/pvt_v2_b5.pth'}, 'DATA': {'ANNO_CSV': '../../avsbench_data/Single-source/s4_meta_data.csv', 'DIR_IMG': '../../avsbench_data/Single-source/s4_data/visual_frames', 'DIR_AUDIO_LOG_MEL': '../../avsbench_data/Single-source/s4_data/audio_log_mel', 'DIR_MASK': '../../avsbench_data/Single-source/s4_data/gt_masks', 'IMG_SIZE': [224, 224]}}
+2023-07-16 15:12:57,807 __main__ INFO ==> Arguments: Namespace(log_dir='/home/yujr/workstation/Audio-Visual-Seg/avsbench_data/train_logs/s4_logs/TPAVI_S4_Test_50_percent.sh_20230716-151257', lr=0.0001, max_epoches=15, num_workers=8, save_pred_mask=False, session_name='TPAVI_S4_Test_50_percent.sh', test_batch_size=4, tpavi_stages=[0, 1, 2, 3], tpavi_va_flag=True, tpavi_vv_flag=False, visual_backbone='resnet', weights='/home/yujr/workstation/Audio-Visual-Seg/avsbench_data/train_logs/s4_logs/TPAVI_S4_TPAVI_partial_test_50_percent.sh_20230716-115515/checkpoints/TPAVI_S4_TPAVI_partial_test_50_percent.sh_best.pth', wt_dec=0.0005)
+2023-07-16 15:12:57,808 __main__ INFO ==> Experiment: TPAVI_S4_Test_50_percent.sh
+/home/yujr/anaconda3/envs/audio_seg/lib/python3.7/site-packages/torchvision/models/_utils.py:209: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  f"The parameter '{pretrained_param}' is deprecated since 0.13 and may be removed in the future, "
+/home/yujr/anaconda3/envs/audio_seg/lib/python3.7/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+2023-07-16 15:13:01,554 __main__ INFO => Load trained model /home/yujr/workstation/Audio-Visual-Seg/avsbench_data/train_logs/s4_logs/TPAVI_S4_TPAVI_partial_test_50_percent.sh_20230716-115515/checkpoints/TPAVI_S4_TPAVI_partial_test_50_percent.sh_best.pth
+==> Use ResNet50 as the visual backbone...
+==> Build TPAVI block...
+==> Build TPAVI block...
+==> Build TPAVI block...
+==> Build TPAVI block...
+==> Load pretrained ResNet50 parameters from ../../pretrained_backbones/resnet50-19c8e357.pth
+==> Load pretrained VGGish parameters from ../../pretrained_backbones/vggish-10086976.pth
+740/4932 videos are used for test
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 0, iou: 0.6140725016593933, F_score: 0.7947507500648499
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 1, iou: 0.6037602424621582, F_score: 0.7733967304229736
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 2, iou: 0.6871604919433594, F_score: 0.8214481472969055
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 3, iou: 0.6919617056846619, F_score: 0.8438143134117126
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 4, iou: 0.7291355133056641, F_score: 0.8827614188194275
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 5, iou: 0.7260364890098572, F_score: 0.8913397192955017
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 6, iou: 0.67847740650177, F_score: 0.8731193542480469
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 7, iou: 0.6572068333625793, F_score: 0.815765380859375
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 8, iou: 0.5864402055740356, F_score: 0.7232803702354431
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 9, iou: 0.5549046397209167, F_score: 0.7401493787765503
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 10, iou: 0.601185142993927, F_score: 0.8042923808097839
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 11, iou: 0.49193546175956726, F_score: 0.7019517421722412
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 12, iou: 0.7383469343185425, F_score: 0.8482451438903809
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 13, iou: 0.8284580111503601, F_score: 0.9068664908409119
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 14, iou: 0.7920387387275696, F_score: 0.9197475910186768
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 15, iou: 0.6822011470794678, F_score: 0.7472462058067322
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 16, iou: 0.700131356716156, F_score: 0.8392512202262878
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 17, iou: 0.8532123565673828, F_score: 0.9332944750785828
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 18, iou: 0.7435919642448425, F_score: 0.8349863886833191
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 19, iou: 0.7756706476211548, F_score: 0.9036469459533691
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 20, iou: 0.786580502986908, F_score: 0.9005792737007141
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 21, iou: 0.8701841235160828, F_score: 0.9427958726882935
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 22, iou: 0.8683835864067078, F_score: 0.9395122528076172
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 23, iou: 0.888953685760498, F_score: 0.9533458948135376
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 24, iou: 0.8827877044677734, F_score: 0.9533104300498962
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 25, iou: 0.8759457468986511, F_score: 0.941240131855011
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 26, iou: 0.7608294486999512, F_score: 0.8699697852134705
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 27, iou: 0.8668508529663086, F_score: 0.9312096834182739
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 28, iou: 0.7874467372894287, F_score: 0.8468086123466492
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 29, iou: 0.7380001544952393, F_score: 0.8308246731758118
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 30, iou: 0.675929069519043, F_score: 0.8185936808586121
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 31, iou: 0.5974783301353455, F_score: 0.77872234582901
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 32, iou: 0.7203164100646973, F_score: 0.8641168475151062
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 33, iou: 0.5628603100776672, F_score: 0.6730405688285828
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 34, iou: 0.2751440703868866, F_score: 0.3583650290966034
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 35, iou: 0.6732878684997559, F_score: 0.7952253222465515
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 36, iou: 0.6576387286186218, F_score: 0.8118796348571777
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 37, iou: 0.5676135420799255, F_score: 0.7339000105857849
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 38, iou: 0.7513039708137512, F_score: 0.8541118502616882
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 39, iou: 0.6341598033905029, F_score: 0.7651866674423218
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 40, iou: 0.7018157839775085, F_score: 0.8491054773330688
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 41, iou: 0.7724892497062683, F_score: 0.8742748498916626
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 42, iou: 0.8057279586791992, F_score: 0.9166213274002075
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 43, iou: 0.5707442164421082, F_score: 0.8027793169021606
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 44, iou: 0.8590788245201111, F_score: 0.9467474222183228
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 45, iou: 0.8121566772460938, F_score: 0.9173631072044373
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 46, iou: 0.8208057284355164, F_score: 0.9189153909683228
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 47, iou: 0.7644447088241577, F_score: 0.8873335719108582
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 48, iou: 0.8462439775466919, F_score: 0.9343868494033813
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 49, iou: 0.7607507109642029, F_score: 0.8565773963928223
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 50, iou: 0.7488514184951782, F_score: 0.8276206254959106
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 51, iou: 0.8426902890205383, F_score: 0.9354187250137329
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 52, iou: 0.7045678496360779, F_score: 0.8396942019462585
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 53, iou: 0.887317955493927, F_score: 0.9444308280944824
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 54, iou: 0.7516092658042908, F_score: 0.8550168871879578
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 55, iou: 0.8822280764579773, F_score: 0.9506179690361023
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 56, iou: 0.5787637829780579, F_score: 0.7448656558990479
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 57, iou: 0.8411391377449036, F_score: 0.922467827796936
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 58, iou: 0.8389682173728943, F_score: 0.9181287884712219
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 59, iou: 0.894561231136322, F_score: 0.95510333776474
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 60, iou: 0.6719819903373718, F_score: 0.872730553150177
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 61, iou: 0.903695285320282, F_score: 0.9627232551574707
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 62, iou: 0.9093994498252869, F_score: 0.9654766321182251
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 63, iou: 0.8813244104385376, F_score: 0.9419208765029907
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 64, iou: 0.8487856984138489, F_score: 0.9110441207885742
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 65, iou: 0.8590750098228455, F_score: 0.9384540915489197
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 66, iou: 0.8181962966918945, F_score: 0.8854450583457947
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 67, iou: 0.8946722149848938, F_score: 0.9557476043701172
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 68, iou: 0.7965478301048279, F_score: 0.9106845855712891
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 69, iou: 0.7432476282119751, F_score: 0.8378143310546875
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 70, iou: 0.8178736567497253, F_score: 0.9026281237602234
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 71, iou: 0.5339868664741516, F_score: 0.6740041375160217
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 72, iou: 0.8532501459121704, F_score: 0.9232902526855469
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 73, iou: 0.8298096060752869, F_score: 0.917701244354248
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 74, iou: 0.7763237953186035, F_score: 0.8610419631004333
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 75, iou: 0.8734459280967712, F_score: 0.9416710138320923
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 76, iou: 0.6583861708641052, F_score: 0.8159636855125427
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 77, iou: 0.80841463804245, F_score: 0.886649489402771
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 78, iou: 0.6241890788078308, F_score: 0.708350658416748
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 79, iou: 0.8978581428527832, F_score: 0.9497525095939636
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 80, iou: 0.8230951428413391, F_score: 0.9128104448318481
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 81, iou: 0.8789417147636414, F_score: 0.9423553943634033
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 82, iou: 0.7114421725273132, F_score: 0.8355003595352173
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 83, iou: 0.7215963006019592, F_score: 0.8369646072387695
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 84, iou: 0.6277905106544495, F_score: 0.792332649230957
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 85, iou: 0.6964666843414307, F_score: 0.8412250876426697
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 86, iou: 0.4905897080898285, F_score: 0.6043659448623657
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 87, iou: 0.5062228441238403, F_score: 0.6049877405166626
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 88, iou: 0.5962828993797302, F_score: 0.6913463473320007
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 89, iou: 0.602081298828125, F_score: 0.7533610463142395
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 90, iou: 0.592057466506958, F_score: 0.7665053009986877
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 91, iou: 0.49836650490760803, F_score: 0.6106483340263367
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 92, iou: 0.8477112054824829, F_score: 0.9034966826438904
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 93, iou: 0.7587687969207764, F_score: 0.8296036720275879
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 94, iou: 0.8484678268432617, F_score: 0.9443778395652771
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 95, iou: 0.8423267602920532, F_score: 0.9205271601676941
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 96, iou: 0.6756870150566101, F_score: 0.766537606716156
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 97, iou: 0.8022797703742981, F_score: 0.91195148229599
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 98, iou: 0.859571635723114, F_score: 0.9381766319274902
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 99, iou: 0.7993815541267395, F_score: 0.8746166229248047
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 100, iou: 0.8865000009536743, F_score: 0.9507877230644226
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 101, iou: 0.7256452441215515, F_score: 0.7953676581382751
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 102, iou: 0.7516534924507141, F_score: 0.8320848345756531
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 103, iou: 0.6292882561683655, F_score: 0.7414993643760681
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 104, iou: 0.7699154615402222, F_score: 0.8657410740852356
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 105, iou: 0.5766183137893677, F_score: 0.6805432438850403
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 106, iou: 0.8163960576057434, F_score: 0.8645500540733337
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 107, iou: 0.6361539959907532, F_score: 0.7080904841423035
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 108, iou: 0.6057536602020264, F_score: 0.707465410232544
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 109, iou: 0.6237488985061646, F_score: 0.7105007171630859
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 110, iou: 0.5118494033813477, F_score: 0.597977876663208
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 111, iou: 0.20889762043952942, F_score: 0.34338584542274475
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 112, iou: 0.5070902109146118, F_score: 0.6605789065361023
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 113, iou: 0.43360182642936707, F_score: 0.6011528372764587
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 114, iou: 0.25849005579948425, F_score: 0.48905235528945923
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 115, iou: 0.3496561050415039, F_score: 0.6300565600395203
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 116, iou: 0.4627262055873871, F_score: 0.6682681441307068
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 117, iou: 0.22909627854824066, F_score: 0.38340213894844055
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 118, iou: 0.3239755630493164, F_score: 0.4778600335121155
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 119, iou: 0.18008127808570862, F_score: 0.3509349524974823
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 120, iou: 0.25670069456100464, F_score: 0.39888089895248413
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 121, iou: 0.47471991181373596, F_score: 0.7610893249511719
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 122, iou: 0.7569863796234131, F_score: 0.8757921457290649
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 123, iou: 0.8308063745498657, F_score: 0.928299605846405
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 124, iou: 0.8626327514648438, F_score: 0.9310283064842224
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 125, iou: 0.7567340731620789, F_score: 0.875140368938446
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 126, iou: 0.7443689703941345, F_score: 0.8847605586051941
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 127, iou: 0.815852165222168, F_score: 0.9196832776069641
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 128, iou: 0.8234289288520813, F_score: 0.9238405227661133
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 129, iou: 0.845952033996582, F_score: 0.9278529286384583
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 130, iou: 0.771074116230011, F_score: 0.8940954208374023
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 131, iou: 0.7786702513694763, F_score: 0.9029941558837891
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 132, iou: 0.8511043787002563, F_score: 0.9392852187156677
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 133, iou: 0.7181012034416199, F_score: 0.8121911883354187
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 134, iou: 0.7550035715103149, F_score: 0.860913097858429
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 135, iou: 0.5390397310256958, F_score: 0.653423011302948
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 136, iou: 0.8943662643432617, F_score: 0.953125
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 137, iou: 0.7296061515808105, F_score: 0.8616946339607239
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 138, iou: 0.5042580962181091, F_score: 0.6545029878616333
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 139, iou: 0.8499884605407715, F_score: 0.9237663149833679
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 140, iou: 0.8575154542922974, F_score: 0.9134680032730103
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 141, iou: 0.7929192781448364, F_score: 0.8743354082107544
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 142, iou: 0.5228638052940369, F_score: 0.6549347639083862
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 143, iou: 0.7269749045372009, F_score: 0.8061434030532837
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 144, iou: 0.7008444666862488, F_score: 0.8227826356887817
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 145, iou: 0.6840084195137024, F_score: 0.7811380624771118
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 146, iou: 0.697687566280365, F_score: 0.8156445622444153
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 147, iou: 0.8936919569969177, F_score: 0.939283549785614
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 148, iou: 0.5926834344863892, F_score: 0.7604787349700928
+=> eval [FMeasure]..
+20 videos in this batch2023-07-16 15:14:51,053 __main__ INFO test miou: 0.7050377130508423, F_score: 0.8143329642914438
+
+n_iter: 149, iou: 0.5205602645874023, F_score: 0.7722791433334351
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 150, iou: 0.8750721216201782, F_score: 0.9395820498466492
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 151, iou: 0.5883805155754089, F_score: 0.6291113495826721
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 152, iou: 0.5942004323005676, F_score: 0.6578826308250427
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 153, iou: 0.6315621733665466, F_score: 0.6883400082588196
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 154, iou: 0.6919330358505249, F_score: 0.7607532143592834
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 155, iou: 0.4398353099822998, F_score: 0.5530818700790405
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 156, iou: 0.4241600036621094, F_score: 0.5400285720825195
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 157, iou: 0.5288665890693665, F_score: 0.6066044569015503
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 158, iou: 0.6965414881706238, F_score: 0.779927134513855
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 159, iou: 0.6449460983276367, F_score: 0.7265967726707458
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 160, iou: 0.8045875430107117, F_score: 0.8919793367385864
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 161, iou: 0.8709673285484314, F_score: 0.9323210716247559
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 162, iou: 0.8050777316093445, F_score: 0.9010489583015442
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 163, iou: 0.752423107624054, F_score: 0.8589253425598145
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 164, iou: 0.8081060647964478, F_score: 0.8891488313674927
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 165, iou: 0.8956320881843567, F_score: 0.9568213820457458
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 166, iou: 0.7596433162689209, F_score: 0.8729434013366699
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 167, iou: 0.7037035822868347, F_score: 0.8317877650260925
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 168, iou: 0.7038472294807434, F_score: 0.8041122555732727
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 169, iou: 0.6421393752098083, F_score: 0.774558961391449
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 170, iou: 0.7384244799613953, F_score: 0.8526149988174438
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 171, iou: 0.6624397039413452, F_score: 0.7798101902008057
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 172, iou: 0.6103739142417908, F_score: 0.734346330165863
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 173, iou: 0.7029501795768738, F_score: 0.8257104754447937
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 174, iou: 0.736732006072998, F_score: 0.8075613379478455
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 175, iou: 0.6228806376457214, F_score: 0.7187830209732056
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 176, iou: 0.6374649405479431, F_score: 0.7731691598892212
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 177, iou: 0.8490039110183716, F_score: 0.9306812286376953
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 178, iou: 0.8110008239746094, F_score: 0.9018334746360779
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 179, iou: 0.6263484954833984, F_score: 0.7387835383415222
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 180, iou: 0.6557416915893555, F_score: 0.7339459657669067
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 181, iou: 0.7289366722106934, F_score: 0.8384114503860474
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 182, iou: 0.6312863230705261, F_score: 0.7084073424339294
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 183, iou: 0.6473881006240845, F_score: 0.7193630337715149
+=> eval [FMeasure]..
+20 videos in this batch
+n_iter: 184, iou: 0.8309529423713684, F_score: 0.9061266183853149
+test miou: 0.7050377130508423
+test F_score: 0.8143329642914438
