@@ -30,8 +30,11 @@ python preprocess_ms3.py
 
 ## Pretrained Model Weights Preparation
 Pretrained models we used in this work include `AudioCLIP`, `CLIP`, `ESResNeXt`, `SAM`, `VGGish`, `resnet50` and `PVT`.
+
 For `AudioCLIP`, `CLIP` and `ESResNeXt`, you can access the pre-trained checkpoints from [AudioCLIP releases](https://github.com/AndreyGuzhov/AudioCLIP/releases).
+
 For `SAM`, you can access the pre-trained checkpoint from [SAM-VIT-H](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)
+
 For `VGGish`, `resnet50` and `PVT`, we follow [AVSbench pretrained backbones](https://github.com/OpenNLPLab/AVSBench/tree/main/pretrained_backbones)
 
 ## Directory Tree after Dataset and Model Weights Preparation
