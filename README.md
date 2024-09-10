@@ -80,6 +80,9 @@ Sam4AVS
  └─ vggish-10086976.pth
 ```
 
+## Supervised AVS
+TODO: scripts
+
 ## Zero-shot AVS
 TODO
 
