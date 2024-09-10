@@ -39,6 +39,45 @@ For `VGGish`, `resnet50` and `PVT`, we follow [AVSbench pretrained backbones](ht
 
 ## Directory Tree after Dataset and Model Weights Preparation
 
+Sam4AVS
+├─ avs_scripts
+ ├─ avs_ms3
+ ├─ avs_ms3_aclp
+ ├─ avs_s4
+ ├─ avs_s4_aclp
+ ├─ avs_ms3_aclp_ablation
+ ├─ avs_s4_aclp_ablation
+ └─ avs_s4_zero_shot_sam
+├─ avsbench_data
+ ├─ Multi-sources
+  └─ ms3_data
+   ├─ audio_log_mel
+   ├─ audio_wav
+   ├─ gt_masks
+   ├─ raw_videos
+   └─ visual_frames
+ ├─ Single-source
+  └─ s4_data
+   ├─ audio_log_mel
+   ├─ audio_wav
+   ├─ gt_masks
+   ├─ raw_videos
+   └─ visual_frames
+ └─ train_logs
+├─ preprocess_scripts
+ ├─ preprocess_ms3.py
+ └─ preprocess_s4.py
+└─ pretrained_backbones
+ ├─ AudioCLIP-Full-Training.pt
+ ├─ AudioCLIP-Partial-Training.pt
+ ├─ bpe_simple_vocab_16e6.txt.gz
+ ├─ CLIP.pt
+ ├─ ESRNXFBSP.pt
+ ├─ pvt_v2_b5.pth
+ ├─ resnet50-19c8e357.pth
+ ├─ sam_vit_h_4b8939.pth
+ └─ vggish-10086976.pth
+
 ## Zero-shot AVS
 TODO
 
