@@ -39,6 +39,7 @@ For `VGGish`, `resnet50` and `PVT`, we follow [AVSbench pretrained backbones](ht
 
 ## Directory Tree after Dataset and Model Weights Preparation
 
+```text
 Sam4AVS
 ├─ avs_scripts
  ├─ avs_ms3
@@ -77,6 +78,7 @@ Sam4AVS
  ├─ resnet50-19c8e357.pth
  ├─ sam_vit_h_4b8939.pth
  └─ vggish-10086976.pth
+```
 
 ## Zero-shot AVS
 TODO
