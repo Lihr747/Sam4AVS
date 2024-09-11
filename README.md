@@ -104,6 +104,8 @@ cd avs_scripts/avs_s4_aclp_ablation
 bash train_bashes/*.sh
 ```
 
+For multi-source AVS ablation
+
 ```bash
 cd avs_scripts/avs_ms3_aclp_ablation
 bash train_bashes/*.sh
