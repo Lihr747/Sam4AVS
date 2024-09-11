@@ -81,11 +81,40 @@ Sam4AVS
 ```
 
 ## Supervised AVS
-TODO: scripts
+For single-source AVS
 
-## Zero-shot AVS
-TODO
+```bash
+cd avs_scripts/avs_s4_aclp
+bash train_bashes/train_fully_audiocliprealfpn_visual_training_Adam0.00005_lr_mult_batch_4_concate_fusion_bilinear.sh
+```
+
+For multi-source AVS
+
+```bash
+cd avs_scripts/avs_ms3_aclp
+bash train_bashes/train_fully_audiocliprealfpn_visual_training_Adam0.00005_lr_mult_batch_4_concate_fusion_bilinear.sh
+```
 
 ## Validation of Contrastive Pre-training Benefit for AVS
+
+For single-source AVS ablation
+
+```bash
+cd avs_scripts/avs_s4_aclp_ablation
+bash train_bashes/*.sh
+```
+
+```bash
+cd avs_scripts/avs_ms3_aclp_ablation
+bash train_bashes/*.sh
+```
+
+## Zero-shot AVS
+
 TODO
 
+### No-Prompt
+
+### Point-Prompt
+
+### Box-Prompt
