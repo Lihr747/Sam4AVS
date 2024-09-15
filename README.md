@@ -113,10 +113,103 @@ bash train_bashes/*.sh
 
 ## Zero-shot AVS
 
-TODO
+```bash
+conda activate ZSAVS
+```
 
 ### No-Prompt
 
+For single-source AVS
+
+```bash
+cd ./zero_shot/S4
+python no_prompt.py
+```
+
+For multi-source AVS
+
+```bash
+cd ./zero_shot/MS3
+python no_prompt.py
+```
+
 ### Point-Prompt
 
+For single-source AVS
+
+1. Point-prompt(local)
+
+```bash
+cd avs_scripts/avs_s4_zero_shot_sam
+bash train_bashes/CLIP_surgery_reverse_0.6_peak_maxscore_Full_none.sh
+```
+
+2. Point-prompt(global)
+
+```bash
+cd avs_scripts/avs_s4_zero_shot_sam
+bash train_bashes/CLIP_surgery_reverse_top_maxscore_Full_none.sh
+```
+
+3. Point-prompt(dense)
+
+```bash
+cd avs_scripts/avs_s4_zero_shot_sam
+bash train_bashes/CLIP_surgery_reverse_0.85_dense_maxscore_Full_none.sh
+```
+
+For multi-source AVS
+
+1. Point-prompt(local)
+
+```bash
+cd avs_scripts/avs_ms3_zero_shot_sam
+bash train_bashes/Multi_CLIP_surgery_reverse_0.65_peak_maxscore_Full_none.sh
+```
+
+2. Point-prompt(global)
+
+```bash
+cd avs_scripts/avs_ms3_zero_shot_sam
+bash train_bashes/Multi_CLIP_surgery_reverse_top_maxscore_Full_none.sh
+```
+
+3. Point-prompt(dense)
+
+```bash
+cd avs_scripts/avs_ms3_zero_shot_sam
+bash train_bashes/Multi_CLIP_surgery_reverse_0.7_dense_maxscore_Full_none.sh
+```
+
+
+### Heatmap-based Box-Prompt
+
+For single-source AVS
+
+```bash
+cd avs_scripts/avs_s4_zero_shot_sam
+bash heatmap_box_prompt/box_prompt_CLIP_surgery_reverse_0.55_single_box_maxarea_Full_none.sh
+```
+
+For multi-source AVS
+
+```bash
+cd avs_scripts/avs_ms3_zero_shot_sam
+bash heatmap_box_prompt/multi_box_prompt_CLIP_surgery_reverse_0.55_single_box_maxarea_Full_none.sh
+```
+
 ### Box-Prompt
+
+For single-source AVS
+
+```bash
+cd ./zero_shot/S4
+python box_prompt.py
+```
+
+For multi-source AVS
+
+```bash
+cd ./zero_shot/MS3
+python box_prompt.py
+```
