@@ -81,6 +81,11 @@ Sam4AVS
 ```
 
 ## Supervised AVS
+
+```bash
+conda activate audio_seg
+```
+
 For single-source AVS
 
 ```bash
