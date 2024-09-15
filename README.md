@@ -95,7 +95,7 @@ cd avs_scripts/avs_ms3_aclp
 bash train_bashes/train_fully_audiocliprealfpn_visual_training_Adam0.00005_lr_mult_batch_4_concate_fusion_bilinear.sh
 ```
 
-## Validation of Contrastive Pre-training Benefit for AVS
+#### Validation of Contrastive Pre-training Benefit for AVS
 
 For single-source AVS ablation
 
